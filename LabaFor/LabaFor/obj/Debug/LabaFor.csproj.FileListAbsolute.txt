@@ -1,0 +1,30 @@
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\bin\Debug\LabaFor.exe.config
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\bin\Debug\LabaFor.exe
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\bin\Debug\LabaFor.pdb
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.csprojAssemblyReference.cache
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\MainWindow.g.cs
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\App.g.cs
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor_MarkupCompile.cache
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor_MarkupCompile.lref
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\MainWindow.baml
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.g.resources
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.Properties.Resources.resources
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.csproj.GenerateResource.cache
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.csproj.CoreCompileInputs.cache
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.exe
+F:\MY\Универ\5 семестр\Операционные системы\LabaFor\LabaFor\obj\Debug\LabaFor.pdb
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\bin\Debug\LabaFor.exe.config
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\bin\Debug\LabaFor.exe
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\bin\Debug\LabaFor.pdb
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.csprojAssemblyReference.cache
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\MainWindow.g.cs
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\App.g.cs
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor_MarkupCompile.cache
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor_MarkupCompile.lref
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\MainWindow.baml
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.g.resources
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.Properties.Resources.resources
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.csproj.GenerateResource.cache
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.csproj.CoreCompileInputs.cache
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.exe
+C:\proj\c#\DiskAnalysis\LabaFor\LabaFor\obj\Debug\LabaFor.pdb
