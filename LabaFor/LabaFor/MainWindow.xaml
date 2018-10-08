@@ -5,19 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabaFor"
         mc:Ignorable="d"
-        Title="Дисковый анализатор" Height="622" Width="1090.667" FontFamily="Times New Roman" FontSize="14" Opacity="0.8" KeyDown="Window_KeyDown" WindowStyle="None" AllowDrop="True">
+        Title="Дисковый анализатор" Height="700" Width="1100" FontFamily="Times New Roman" FontSize="14" Opacity="0.95" KeyDown="Window_KeyDown" WindowStyle="None" AllowDrop="True">
     <Grid Opacity="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseMove="Grid_MouseMove" MouseUp="Grid_MouseUp">
+        <Grid.RowDefinitions>
+            <RowDefinition  />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="#FF9EAB3B" Offset="0.1"/>
                 <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        
+        <Label Grid.Column="0" Grid.Row="0" Content="Съемные диски" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Grid.Column="1" Grid.Row="0" Content="Жесткие диски" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Grid.Column="2" Grid.Row="0" Content="Удаленные диски" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Grid.Column="3" Grid.Row="0" Content="Дисковод" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Grid.Column="4" Grid.Row="0" Content="RAM диски" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px" FontFamily="Yu Gothic UI Semibold"/>
 
-        <TextBox x:Name="DiskAnalize"  HorizontalAlignment="Left" Height="auto" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display"/>
-        <Button x:Name="butonClose" Content="x" HorizontalAlignment="Right" Height="20" Margin="10" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button x:Name="buttonMinimize" HorizontalAlignment="Right" Height="20" Margin="0,10,60,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="buttonMinimize_Click" BorderBrush="{x:Null}" Background="{x:Null}" CommandParameter="{DynamicResource {x:Static SystemParameters.BorderKey}}" Content="m" />
-        <Button x:Name="buttonScreen" Content="f" HorizontalAlignment="Right" Height="20" Margin="0,10,35,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="buttonScreen_Click" Background="{x:Null}" BorderBrush="{x:Null}" />
+        <TextBox x:Name="RemovaDisk" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Height="auto" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display"/>
+        <TextBox x:Name="HardDisk" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="auto" Margin="10.333,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display" />
+        <TextBox x:Name="RemoteDisk" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Height="auto" Margin="9.667,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display" />
+        <TextBox x:Name="CDisk" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="auto"  Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display" />
+        <TextBox x:Name="RamDisk" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" Height="auto" Margin="9.667,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="4" IsEnabled="True" IsReadOnlyCaretVisible="False" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" BorderThickness="0" Background="{x:Null}" FontSize="16" TextOptions.TextFormattingMode="Display"/>
+
+        <Button x:Name="butonClose" Content="x" HorizontalAlignment="Right" Height="20" Margin="0,10,10,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="4"/>
+        <Button x:Name="buttonMinimize" HorizontalAlignment="Right" Height="20" Margin="0,10,60,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="buttonMinimize_Click" BorderBrush="{x:Null}" Background="{x:Null}" CommandParameter="{DynamicResource {x:Static SystemParameters.BorderKey}}" Content="m" Grid.Column="4" />
+        <Button x:Name="buttonScreen" Content="f" HorizontalAlignment="Right" Height="20" Margin="0,10,35,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.944,1.146" Click="buttonScreen_Click" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="4" />
 
     </Grid>
 </Window>

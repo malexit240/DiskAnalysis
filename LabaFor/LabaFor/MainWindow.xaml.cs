@@ -38,7 +38,6 @@ namespace LabaFor
 
         public MainWindow()
         {
-            
             InitializeComponent();
             AllowsTransparency = true;
             CheckDisk();
@@ -49,7 +48,6 @@ namespace LabaFor
 
         private void CheckDisk()
         {
-
             for (int i = 65; i < 90; i++)
             {
                 string call = Convert.ToChar(i) + ":";
@@ -57,64 +55,69 @@ namespace LabaFor
                 
                 switch (code)
                 {
-                    
                     case 0:
                         break;
                     case 1:
                         break;
                     case 2:
-                        this.DiskAnalize.Text += $"Диск {call} - Съемный носитель\n";
+                        this.RemovaDisk.Text += $"Диск {call} - Съемный носитель\n";
+                        WriteInfo(RemovaDisk, call);
                         break;
                     case 3:
-                        this.DiskAnalize.Text += $"Диск {call} - Жесткий диск\n";
+                        this.HardDisk.Text += $"Диск {call} - Жесткий диск\n";
+                        WriteInfo(HardDisk, call);
                         break;
                     case 4:
-                        this.DiskAnalize.Text += $"Диск {call} - Сетевой диск\n";
+                        this.RemoteDisk.Text += $"Диск {call} - Сетевой диск\n";
+                        WriteInfo(RemoteDisk, call);
                         break;
                     case 5:
-                        this.DiskAnalize.Text += $"Диск {call} - Дисковод\n";
+                        this.CDisk.Text += $"Диск {call} - Дисковод\n";
+                        WriteInfo(CDisk, call);
                         break;
                     case 6:
-                        this.DiskAnalize.Text += $"Диск {call} - RAM диск\n";
+                        this.RamDisk.Text += $"Диск {call} - RAM диск\n";
+                        WriteInfo(RamDisk, call);
                         break;
 
                 }
 
-                if(code!=1)
-                {
-                    unsafe
-                    {
-                        long FBAC = 0;
-                        long TB = 0;
-                        long TFB = 0;
-                        int SPC = 0;
-                        int BPS = 0;
-                        int NFC = 0;
-                        int TNC = 0;
-                        StringBuilder NB = new StringBuilder(64);
-                        StringBuilder FSNB = new StringBuilder(64);
-                        int SN = 0, MCL = 0, FSF = 0;
-
-
-
-                        GetVolumeInformation(call, NB, 63, &SN, &MCL, &FSF, FSNB, 63);
-                        GetDiskFreeSpaceW(call, &SPC, &BPS, &NFC, &TNC);
-                        GetDiskFreeSpaceExW(call, &FBAC, &TB, &TFB);
-
-                        this.DiskAnalize.Text += $"Всего места:{TB/1024/1024} Мб\n";
-                        this.DiskAnalize.Text += $"Свободного места:{TFB/1024/1024} Мб\n";
-                        this.DiskAnalize.Text += $"Секторов на кластер:{SPC}\n";
-                        this.DiskAnalize.Text += $"Байтов в секторе:{BPS} байт\n";
-                        this.DiskAnalize.Text += $"Число свободных кластеров:{NFC}\n";
-                        this.DiskAnalize.Text += $"Общее число кластеров:{TNC}\n";
-                        this.DiskAnalize.Text += $"Метка тома:{NB}\n";
-                        this.DiskAnalize.Text += $"Серийный номер:{SN}\n";
-                        this.DiskAnalize.Text += $"Файловая система:{FSNB}\n";
-                    }
-                    this.DiskAnalize.Text += '\n';
-                }
 
             }
+        }
+
+        private void WriteInfo(TextBox DiskAnalize,string call)
+        {
+            unsafe
+            {
+                long FBAC = 0;
+                long TB = 0;
+                long TFB = 0;
+                int SPC = 0;
+                int BPS = 0;
+                int NFC = 0;
+                int TNC = 0;
+                StringBuilder NB = new StringBuilder(64);
+                StringBuilder FSNB = new StringBuilder(64);
+                int SN = 0, MCL = 0, FSF = 0;
+
+
+
+                GetVolumeInformation(call, NB, 63, &SN, &MCL, &FSF, FSNB, 63);
+                GetDiskFreeSpaceW(call, &SPC, &BPS, &NFC, &TNC);
+                GetDiskFreeSpaceExW(call, &FBAC, &TB, &TFB);
+
+                DiskAnalize.Text += $"Всего места:{TB / 1024 / 1024} Мб\n";
+                DiskAnalize.Text += $"Свободного места:{TFB / 1024 / 1024} Мб\n";
+                DiskAnalize.Text += $"Секторов на кластер:{SPC}\n";
+                DiskAnalize.Text += $"Байтов в секторе:{BPS} байт\n";
+                DiskAnalize.Text += $"Число свободных кластеров:{NFC}\n";
+                DiskAnalize.Text += $"Общее число кластеров:{TNC}\n";
+                DiskAnalize.Text += $"Метка тома:{NB}\n";
+                DiskAnalize.Text += $"Серийный номер:{SN}\n";
+                DiskAnalize.Text += $"Файловая система:{FSNB}\n";
+            }
+            DiskAnalize.Text += '\n';
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
